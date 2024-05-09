@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+    }
+    .calculator {
+        margin: 50px auto;
+        width: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    input[type="number"], input[type="submit"] {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    #result {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="calculator">
+    <h2>Calculator</h2>
+    
+    <input type="number" id="input1" placeholder="Input 1"><br>
+   
+    <input type="number" id="input2" placeholder="Input 2"><br>
+    <input type="submit" value="Add" onclick="add()">
+    <input type="submit" value="Subtract" onclick="subtract()">
+    <input type="submit" value="Divide" onclick="divide()">
+    <input type="submit" value="Multiply" onclick="multiply()">
+    <div id="result"></div>
+</div>
+
+<script>
+    function add() {
+        var x = parseFloat(document.getElementById("input1").value);
+        var y = parseFloat(document.getElementById("input2").value);
+        var z = x + y;
+        document.getElementById("result").innerHTML = "Result: " + x + " + " + y + " = " + z;
+    }
+
+    function subtract() {
+        var x = parseFloat(document.getElementById("input1").value);
+        var y = parseFloat(document.getElementById("input2").value);
+        var z = x - y;
+        document.getElementById("result").innerHTML = "Result: " + x + " - " + y + " = " + z;
+    }
+
+    function divide() {
+        var x = parseFloat(document.getElementById("input1").value);
+        var y = parseFloat(document.getElementById("input2").value);
+        var z = x / y;
+        document.getElementById("result").innerHTML = "Result: " + x + " / " + y + " = " + z;
+    }
+
+    function multiply() {
+        var x = parseFloat(document.getElementById("input1").value);
+        var y = parseFloat(document.getElementById("input2").value);
+        var z = x * y;
+        document.getElementById("result").innerHTML = "Result: " + x + " * " + y + " = " + z;
+    }
+</script>
+</body>
+</html>
